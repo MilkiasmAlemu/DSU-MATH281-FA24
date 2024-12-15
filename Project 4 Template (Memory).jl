@@ -1,19 +1,17 @@
 ### A Pluto.jl notebook ###
-# v0.20.3
+# v0.19.46
 
 using Markdown
 using InteractiveUtils
 
 # This Pluto notebook uses @bind for interactivity. When running this notebook outside of Pluto, the following 'mock version' of @bind gives bound variables a default value (instead of an error).
 macro bind(def, element)
-    #! format: off
     quote
         local iv = try Base.loaded_modules[Base.PkgId(Base.UUID("6e696c72-6542-2067-7265-42206c756150"), "AbstractPlutoDingetjes")].Bonds.initial_value catch; b -> missing; end
         local el = $(esc(element))
         global $(esc(def)) = Core.applicable(Base.get, el) ? Base.get(el) : iv(el)
         el
     end
-    #! format: on
 end
 
 # ╔═╡ 5f282c55-401b-4e73-8720-bc08a4d84b30
@@ -35,7 +33,7 @@ TableOfContents()
 
 # ╔═╡ 89d13cae-c07b-407a-944d-9967bc17b803
 md"""
-###### My Name is: 
+###### My Name is: Milkias Alemu
 """
 
 # ╔═╡ d72863dd-70e9-44a4-90e5-0695eac31811
@@ -56,17 +54,13 @@ md"""
 # ╔═╡ 48b5e8dd-e258-4635-8794-048a1e39f5bf
 # Answer the Questions
 md"""
-
+I have chosen the Life Expectancy dataset from the World Health Organization (WHO) because it meets all the requirements for this assignment. The dataset contains over 100 entries and includes a numeric column (GDP) that can be broken into at least four reasonable categories, such as low, lower-middle, upper-middle, and high GDP. This allows for a meaningful comparison of how Life Expectancy varies across countries with different economic statuses. I find this particularly interesting because understanding how life expectancy is influenced by economic factors is crucial for addressing global health disparities. Wealthier countries generally have better healthcare systems, which lead to longer life expectancy, while low-income countries may face significant health challenges that contribute to lower life expectancy. By analyzing the relationship between GDP and life expectancy, I can uncover valuable insights into how economic conditions influence public health outcomes. This makes it an ideal choice for exploring significant differences in life expectancy between countries and regions, and understanding the factors that contribute to these disparities.
 """
 
 # ╔═╡ 69f34590-2e7a-4ed2-87ff-f3427db6f3d7
 @htl("""
 	<hr>
 """)
-
-# ╔═╡ 5186e887-0784-4207-98a4-cbf16ca858f7
-# Define Your Data Frame
-
 
 # ╔═╡ 77be6d11-fe55-4863-8ad7-8c712ade3228
 @htl("""
@@ -76,51 +70,14 @@ md"""
 # ╔═╡ 05079284-d355-4076-9862-be4889ce31ad
 # Answer the Question
 md"""
-
+I plan to study the GDP column from the dataset, as it is a crucial economic indicator that often correlates with public health outcomes, including Life Expectancy. I will break the GDP column into four categories: low (under $5,000), lower-middle ($5,000–$10,000), upper-middle ($10,000–$20,000), and high (over $20,000). This classification allows for a meaningful comparison of how life expectancy varies across countries with different economic statuses. I find this particularly interesting because GDP strongly influences factors such as healthcare infrastructure, education, and overall living conditions, which in turn affect life expectancy. Studying these variations offers valuable insights into global health disparities and the role of economic development in improving health outcomes. By understanding why life expectancy differs across countries and the socioeconomic factors that contribute to these disparities, we can work towards improving global health outcomes and shaping policies that address health inequalities.
 """
-
-# ╔═╡ 3e2d0b14-9171-4475-99b8-3090337f12e2
-
-
-# ╔═╡ 11d1238f-e432-42c3-860e-76e81ff5eda0
-# Define Tests:
-begin
-	# Test 1:
-
-	# Test 2:
-
-	# Test 3:
-
-	# Test 4:
-
-	# More if Desired:
-	
-end;
-
-# ╔═╡ f2ac2f1a-a76c-4f9c-b87d-31dbc1cc7688
-# Define Categories:
-begin
-	# Category 1:
-
-	# Category 2:
-
-	# Category 3:
-
-	# Category 4:
-
-	# More if Desired:
-	
-end;
 
 # ╔═╡ 780961d8-f43f-4e27-987e-5a0a46924603
 # Answer the Question
 md"""
-
+I am breaking up the data based on GDP into four groups: low GDP (< $5,000), lower-middle GDP ($5,000–$10,000), upper-middle GDP ($10,000–$20,000), and high GDP (> $20,000). This categorization allows me to explore how Life Expectancy varies across countries with different economic statuses, as economic wealth plays a significant role in shaping public health outcomes. After dividing the data by GDP, I will analyze Life Expectancy in each group to understand how economic wealth correlates with health outcomes. This is important because wealthier countries generally have better healthcare systems, greater access to medical services, and improved living standards, all of which contribute to higher life expectancy (WHO, 2021). The goal of this approach is to determine whether higher GDP leads to longer life expectancy and to uncover insights into the relationship between economic development and public health. Understanding these links is crucial for addressing health disparities and improving global health outcomes.
 """
-
-# ╔═╡ 6aa96dfa-cf19-48d3-b09b-37274631c44b
-# Box Plot
-
 
 # ╔═╡ 2336c22b-2b2d-4448-a350-150a4bdccc58
 @htl("""
@@ -129,10 +86,6 @@ md"""
 
 # ╔═╡ 3ccb7667-4e5b-4e8d-972f-eac736ac412a
 # Plot the Histogram
-
-
-# ╔═╡ 9961cdcc-92ec-450c-a1e8-8a58cde11bd1
-# Compute the Test Statistic and p–Value
 
 
 # ╔═╡ 76a89a1f-f23a-4426-bf5b-574c3b77a532
@@ -145,18 +98,6 @@ md"""
 @htl("""
 	<hr>
 """)
-
-# ╔═╡ 2b7c0e9a-1add-445b-8060-eaf17ee03501
-# Make your Category List
-
-
-# ╔═╡ 670285bb-96e7-40b7-836d-d80768edc98f
-# ANOVA Histogram
-
-
-# ╔═╡ 796b529f-a6f3-4b04-875d-b860992ff2b9
-# ANOVA Table
-
 
 # ╔═╡ 09152d0e-9bd6-4758-94f6-1349da3d779f
 # Answer the Question
@@ -829,11 +770,11 @@ function histogram(data::AbstractVector{<:Real}; bin_size=5)
 end
 
 # ╔═╡ e840e5a2-816e-4b3f-a7f7-338901880310
-function histogram(data::AbstractVector{<:Real}, X::UnivariateDistribution ; bin_size=5, resolution=0.001)
+function histogram(data::AbstractVector{<:Real}, X::UnivariateDistribution ; bin_size=5)
 	local plot_uuid = "Plot-"*string(uuid1())
 	local x_min = min(data...)
 	local x_max = max(data...)
-	local x_vals = collect((x_min - 1):resolution:(x_max + 1))
+	local x_vals = collect((x_min - 1):0.001:(x_max + 1))
 	local probs = pdf.(X, x_vals)
 	@htl("""
 		<div id=$(plot_uuid)></div>
@@ -1133,6 +1074,67 @@ $(go_box("Explain why you are choosing this dataset, what the entries you plan t
 	$(stop_box("If you refresh the page or close out of Julia, you may see some errors and need to upload your CSV again to remind Julia what your data is."))
 """)
 
+# ╔═╡ 5186e887-0784-4207-98a4-cbf16ca858f7
+# Define Your Data Frame
+My_Data_Frame = UInt8.(My_CSV["data"]) |> IOBuffer |> CSV.File |> DataFrame |> dropmissing
+
+# ╔═╡ 84fe0434-0999-4dcf-9784-30a9f9282d63
+# Define Column
+My_Column = My_Data_Frame[!, "GDP"]
+
+# ╔═╡ 39483000-f3ab-4b29-98e9-809cd2cc23be
+maximum(My_Column)
+
+# ╔═╡ a59fc7d4-df3c-4fa7-82d9-3d92be7052ba
+X = Normal(mean(My_Column), std(My_Column))
+
+# ╔═╡ 9961cdcc-92ec-450c-a1e8-8a58cde11bd1
+# Compute the Test Statistic and p–Value
+chi_square( My_Column, X)
+
+# ╔═╡ 11d1238f-e432-42c3-860e-76e81ff5eda0
+# Define Tests:
+begin
+	# Test 1:
+	My_First_Category_Data = filter(row -> (row."GDP" < 5000), My_Data_Frame)
+	# Test 2:
+	My_Second_Category_Data = filter(row -> ( 5000 <= row."GDP"< 10000), My_Data_Frame)
+	# Test 3:
+	My_Third_Category_Data = filter(row -> (10000 <= row."GDP" < 20000), My_Data_Frame)
+	# Test 4:
+	My_Forth_Category_Data = filter(row -> (20000 <= row."GDP"), My_Data_Frame)
+end;
+
+# ╔═╡ f2ac2f1a-a76c-4f9c-b87d-31dbc1cc7688
+# Define Categories:
+begin
+	# Category 1:
+	Category_1 = My_First_Category_Data[!, "Life expectancy "]
+	# Category 2:
+	Category_2 = My_Second_Category_Data[!, "Life expectancy "]
+	# Category 3:
+	Category_3 = My_Third_Category_Data[!, "Life expectancy "]
+	# Category 4:
+	Category_4 = My_Forth_Category_Data[!, "Life expectancy "]
+	
+end;
+
+# ╔═╡ 6aa96dfa-cf19-48d3-b09b-37274631c44b
+# Box Plot
+box_plot(Category_1, Category_2, Category_3, Category_4)
+
+# ╔═╡ 2b7c0e9a-1add-445b-8060-eaf17ee03501
+# Make your Category List
+My_Categories = [ Category_1, Category_2, Category_3, Category_4]
+
+# ╔═╡ 670285bb-96e7-40b7-836d-d80768edc98f
+# ANOVA Histogram
+ANOVA_histogram( My_Categories, bin_size=1 )
+
+# ╔═╡ 796b529f-a6f3-4b04-875d-b860992ff2b9
+# ANOVA Table
+ANOVA_table( My_Column, My_Categories )
+
 # ╔═╡ b8977fd4-f9ed-446f-9070-7e0c611a37e6
 @htl("""
 	$(go_box("Task 3 – Loading Columns", "Explain what column you wish to study and into what categories you plan to break this up. Make sure to explain why you are interested in this column of data and why it is interesting to study."))
@@ -1295,9 +1297,9 @@ StatsBase = "~0.34.3"
 PLUTO_MANIFEST_TOML_CONTENTS = """
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.11.2"
+julia_version = "1.10.5"
 manifest_format = "2.0"
-project_hash = "e6b2f217e3d33dd11647d67355f52bd76691a190"
+project_hash = "c9ee4dcf16134b0fb5961212967023e82154b1f1"
 
 [[deps.AbstractPlutoDingetjes]]
 deps = ["Pkg"]
@@ -1313,15 +1315,13 @@ version = "1.1.3"
 
 [[deps.ArgTools]]
 uuid = "0dad84c5-d112-42e6-8d28-ef12dabb789f"
-version = "1.1.2"
+version = "1.1.1"
 
 [[deps.Artifacts]]
 uuid = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
-version = "1.11.0"
 
 [[deps.Base64]]
 uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
-version = "1.11.0"
 
 [[deps.CSV]]
 deps = ["CodecZlib", "Dates", "FilePathsBase", "InlineStrings", "Mmap", "Parsers", "PooledArrays", "PrecompileTools", "SentinelArrays", "Tables", "Unicode", "WeakRefStrings", "WorkerUtilities"]
@@ -1398,12 +1398,10 @@ version = "1.0.0"
 [[deps.Dates]]
 deps = ["Printf"]
 uuid = "ade2ca70-3891-5945-98fb-dc099432e06a"
-version = "1.11.0"
 
 [[deps.Distributed]]
 deps = ["Random", "Serialization", "Sockets"]
 uuid = "8ba89e20-285c-5b6f-9357-94700520ee1b"
-version = "1.11.0"
 
 [[deps.Distributions]]
 deps = ["AliasTables", "FillArrays", "LinearAlgebra", "PDMats", "Printf", "QuadGK", "Random", "SpecialFunctions", "Statistics", "StatsAPI", "StatsBase", "StatsFuns"]
@@ -1445,7 +1443,6 @@ weakdeps = ["Mmap", "Test"]
 
 [[deps.FileWatching]]
 uuid = "7b1f6079-737a-58dc-b8bc-7a2ca5c1b5ee"
-version = "1.11.0"
 
 [[deps.FillArrays]]
 deps = ["LinearAlgebra"]
@@ -1473,7 +1470,6 @@ version = "1.3.7"
 [[deps.Future]]
 deps = ["Random"]
 uuid = "9fa8497b-333b-5362-9e8d-4d0656e87820"
-version = "1.11.0"
 
 [[deps.HypergeometricFunctions]]
 deps = ["LinearAlgebra", "OpenLibm_jll", "SpecialFunctions"]
@@ -1515,7 +1511,6 @@ version = "1.4.2"
 [[deps.InteractiveUtils]]
 deps = ["Markdown"]
 uuid = "b77e0a4c-d291-57a0-90e8-8db25a27a240"
-version = "1.11.0"
 
 [[deps.InvertedIndices]]
 git-tree-sha1 = "0dc7b50b8d436461be01300fd8cd45aa0274b038"
@@ -1546,9 +1541,9 @@ version = "0.21.4"
 
 [[deps.JuliaInterpreter]]
 deps = ["CodeTracking", "InteractiveUtils", "Random", "UUIDs"]
-git-tree-sha1 = "fc8504eca188aaae4345649ca6105806bc584b70"
+git-tree-sha1 = "10da5154188682e5c0726823c2b5125957ec3778"
 uuid = "aa1ae85d-cabe-5617-a682-6adf51b2e16a"
-version = "0.9.37"
+version = "0.9.38"
 
 [[deps.LaTeXStrings]]
 git-tree-sha1 = "dda21b8cbd6a6c40d9d02a73230f9d70fed6918c"
@@ -1579,17 +1574,16 @@ version = "0.6.4"
 [[deps.LibCURL_jll]]
 deps = ["Artifacts", "LibSSH2_jll", "Libdl", "MbedTLS_jll", "Zlib_jll", "nghttp2_jll"]
 uuid = "deac9b47-8bc7-5906-a0fe-35ac56dc84c0"
-version = "8.6.0+0"
+version = "8.4.0+0"
 
 [[deps.LibGit2]]
 deps = ["Base64", "LibGit2_jll", "NetworkOptions", "Printf", "SHA"]
 uuid = "76f85450-5226-5b5a-8eaa-529ad045b433"
-version = "1.11.0"
 
 [[deps.LibGit2_jll]]
 deps = ["Artifacts", "LibSSH2_jll", "Libdl", "MbedTLS_jll"]
 uuid = "e37daf67-58a4-590a-8e99-b0245dd2ffc5"
-version = "1.7.2+0"
+version = "1.6.4+0"
 
 [[deps.LibSSH2_jll]]
 deps = ["Artifacts", "Libdl", "MbedTLS_jll"]
@@ -1598,12 +1592,10 @@ version = "1.11.0+1"
 
 [[deps.Libdl]]
 uuid = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
-version = "1.11.0"
 
 [[deps.LinearAlgebra]]
 deps = ["Libdl", "OpenBLAS_jll", "libblastrampoline_jll"]
 uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
-version = "1.11.0"
 
 [[deps.LogExpFunctions]]
 deps = ["DocStringExtensions", "IrrationalConstants", "LinearAlgebra"]
@@ -1623,13 +1615,12 @@ version = "0.3.28"
 
 [[deps.Logging]]
 uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
-version = "1.11.0"
 
 [[deps.LoweredCodeUtils]]
 deps = ["JuliaInterpreter"]
-git-tree-sha1 = "260dc274c1bc2cb839e758588c63d9c8b5e639d1"
+git-tree-sha1 = "688d6d9e098109051ae33d126fcfc88c4ce4a021"
 uuid = "6f1432cf-f94c-5a45-995e-cdbf5db27b0b"
-version = "3.0.5"
+version = "3.1.0"
 
 [[deps.MIMEs]]
 git-tree-sha1 = "65f28ad4b594aebe22157d6fac869786a255b7eb"
@@ -1645,12 +1636,11 @@ version = "0.5.13"
 [[deps.Markdown]]
 deps = ["Base64"]
 uuid = "d6f4376e-aef5-505a-96c1-9c027394607a"
-version = "1.11.0"
 
 [[deps.MbedTLS_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "c8ffd9c3-330d-5841-b78e-0817d7145fa1"
-version = "2.28.6+0"
+version = "2.28.2+1"
 
 [[deps.Missings]]
 deps = ["DataAPI"]
@@ -1660,11 +1650,10 @@ version = "1.2.0"
 
 [[deps.Mmap]]
 uuid = "a63ad114-7e13-5084-954f-fe012c677804"
-version = "1.11.0"
 
 [[deps.MozillaCACerts_jll]]
 uuid = "14a3606d-f60d-562e-9121-12d972cd8159"
-version = "2023.12.12"
+version = "2023.1.10"
 
 [[deps.NetworkOptions]]
 uuid = "ca575930-c2e3-43a9-ace4-1e988b2c1908"
@@ -1673,7 +1662,7 @@ version = "1.2.0"
 [[deps.OpenBLAS_jll]]
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "Libdl"]
 uuid = "4536629a-c528-5b80-bd46-f80d51c5b363"
-version = "0.3.27+1"
+version = "0.3.23+4"
 
 [[deps.OpenLibm_jll]]
 deps = ["Artifacts", "Libdl"]
@@ -1704,13 +1693,9 @@ uuid = "69de0a69-1ddd-5017-9359-2bf0b02dc9f0"
 version = "2.8.1"
 
 [[deps.Pkg]]
-deps = ["Artifacts", "Dates", "Downloads", "FileWatching", "LibGit2", "Libdl", "Logging", "Markdown", "Printf", "Random", "SHA", "TOML", "Tar", "UUIDs", "p7zip_jll"]
+deps = ["Artifacts", "Dates", "Downloads", "FileWatching", "LibGit2", "Libdl", "Logging", "Markdown", "Printf", "REPL", "Random", "SHA", "Serialization", "TOML", "Tar", "UUIDs", "p7zip_jll"]
 uuid = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
-version = "1.11.0"
-weakdeps = ["REPL"]
-
-    [deps.Pkg.extensions]
-    REPLExt = "REPL"
+version = "1.10.0"
 
 [[deps.PlutoHooks]]
 deps = ["InteractiveUtils", "Markdown", "UUIDs"]
@@ -1763,7 +1748,6 @@ version = "2.4.0"
 [[deps.Printf]]
 deps = ["Unicode"]
 uuid = "de0858da-6303-5e67-8744-51eddeeeb8d7"
-version = "1.11.0"
 
 [[deps.PtrArrays]]
 git-tree-sha1 = "77a42d78b6a92df47ab37e177b2deac405e1c88f"
@@ -1783,14 +1767,12 @@ version = "2.11.1"
     Enzyme = "7da242da-08ed-463a-9acd-ee780be4f1d9"
 
 [[deps.REPL]]
-deps = ["InteractiveUtils", "Markdown", "Sockets", "StyledStrings", "Unicode"]
+deps = ["InteractiveUtils", "Markdown", "Sockets", "Unicode"]
 uuid = "3fa0cd96-eef1-5676-8a61-b3b8758bbffb"
-version = "1.11.0"
 
 [[deps.Random]]
 deps = ["SHA"]
 uuid = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
-version = "1.11.0"
 
 [[deps.Reexport]]
 git-tree-sha1 = "45e428421666073eab6f2da5c9d310d99bb12f9b"
@@ -1805,9 +1787,9 @@ version = "1.3.0"
 
 [[deps.Revise]]
 deps = ["CodeTracking", "Distributed", "FileWatching", "JuliaInterpreter", "LibGit2", "LoweredCodeUtils", "OrderedCollections", "REPL", "Requires", "UUIDs", "Unicode"]
-git-tree-sha1 = "834aedb1369919a7b2026d7e04c2d49a311d26f4"
+git-tree-sha1 = "470f48c9c4ea2170fd4d0f8eb5118327aada22f5"
 uuid = "295af30f-e4ad-537b-8983-00126c2a3abe"
-version = "3.6.3"
+version = "3.6.4"
 
 [[deps.Rmath]]
 deps = ["Random", "Rmath_jll"]
@@ -1833,11 +1815,9 @@ version = "1.4.7"
 
 [[deps.Serialization]]
 uuid = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
-version = "1.11.0"
 
 [[deps.Sockets]]
 uuid = "6462fe0b-24de-5631-8697-dd941f90decc"
-version = "1.11.0"
 
 [[deps.SortingAlgorithms]]
 deps = ["DataStructures"]
@@ -1848,7 +1828,7 @@ version = "1.2.1"
 [[deps.SparseArrays]]
 deps = ["Libdl", "LinearAlgebra", "Random", "Serialization", "SuiteSparse_jll"]
 uuid = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
-version = "1.11.0"
+version = "1.10.0"
 
 [[deps.SpecialFunctions]]
 deps = ["IrrationalConstants", "LogExpFunctions", "OpenLibm_jll", "OpenSpecFun_jll"]
@@ -1863,14 +1843,9 @@ version = "2.4.0"
     ChainRulesCore = "d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4"
 
 [[deps.Statistics]]
-deps = ["LinearAlgebra"]
-git-tree-sha1 = "ae3bb1eb3bba077cd276bc5cfc337cc65c3075c0"
+deps = ["LinearAlgebra", "SparseArrays"]
 uuid = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
-version = "1.11.1"
-weakdeps = ["SparseArrays"]
-
-    [deps.Statistics.extensions]
-    SparseArraysExt = ["SparseArrays"]
+version = "1.10.0"
 
 [[deps.StatsAPI]]
 deps = ["LinearAlgebra"]
@@ -1904,10 +1879,6 @@ git-tree-sha1 = "a6b1675a536c5ad1a60e5a5153e1fee12eb146e3"
 uuid = "892a3eda-7b42-436c-8928-eab12a02cf0e"
 version = "0.4.0"
 
-[[deps.StyledStrings]]
-uuid = "f489334b-da3d-4c2e-b8f0-e476e12c162b"
-version = "1.11.0"
-
 [[deps.SuiteSparse]]
 deps = ["Libdl", "LinearAlgebra", "Serialization", "SparseArrays"]
 uuid = "4607b0f0-06f3-5cda-b6b1-a6196a1729e9"
@@ -1915,7 +1886,7 @@ uuid = "4607b0f0-06f3-5cda-b6b1-a6196a1729e9"
 [[deps.SuiteSparse_jll]]
 deps = ["Artifacts", "Libdl", "libblastrampoline_jll"]
 uuid = "bea87d4a-7f5b-5778-9afe-8cc45184846c"
-version = "7.7.0+0"
+version = "7.2.1+1"
 
 [[deps.TOML]]
 deps = ["Dates"]
@@ -1942,7 +1913,6 @@ version = "1.10.0"
 [[deps.Test]]
 deps = ["InteractiveUtils", "Logging", "Random", "Serialization"]
 uuid = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
-version = "1.11.0"
 
 [[deps.TranscodingStreams]]
 git-tree-sha1 = "0c45878dcfdcfa8480052b6ab162cdd138781742"
@@ -1962,11 +1932,9 @@ version = "1.5.1"
 [[deps.UUIDs]]
 deps = ["Random", "SHA"]
 uuid = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
-version = "1.11.0"
 
 [[deps.Unicode]]
 uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
-version = "1.11.0"
 
 [[deps.WeakRefStrings]]
 deps = ["DataAPI", "InlineStrings", "Parsers"]
@@ -1992,7 +1960,7 @@ version = "5.11.0+0"
 [[deps.nghttp2_jll]]
 deps = ["Artifacts", "Libdl"]
 uuid = "8e850ede-7688-5339-a07c-302acd2aaf8d"
-version = "1.59.0+0"
+version = "1.52.0+1"
 
 [[deps.p7zip_jll]]
 deps = ["Artifacts", "Libdl"]
@@ -2020,7 +1988,8 @@ version = "17.4.0+2"
 # ╟─b8977fd4-f9ed-446f-9070-7e0c611a37e6
 # ╠═05079284-d355-4076-9862-be4889ce31ad
 # ╟─34865ff8-8875-4d5b-b6b2-b0bc436458f4
-# ╠═3e2d0b14-9171-4475-99b8-3090337f12e2
+# ╠═84fe0434-0999-4dcf-9784-30a9f9282d63
+# ╠═39483000-f3ab-4b29-98e9-809cd2cc23be
 # ╟─12397c48-8afa-4877-bb09-b05fd7c93359
 # ╠═11d1238f-e432-42c3-860e-76e81ff5eda0
 # ╠═f2ac2f1a-a76c-4f9c-b87d-31dbc1cc7688
@@ -2031,6 +2000,7 @@ version = "17.4.0+2"
 # ╟─2336c22b-2b2d-4448-a350-150a4bdccc58
 # ╟─902c1166-ee22-4f7a-be18-2ced61765a78
 # ╟─a60b8357-5823-4486-942b-4a75ffc96aa9
+# ╠═a59fc7d4-df3c-4fa7-82d9-3d92be7052ba
 # ╠═3ccb7667-4e5b-4e8d-972f-eac736ac412a
 # ╠═9961cdcc-92ec-450c-a1e8-8a58cde11bd1
 # ╠═76a89a1f-f23a-4426-bf5b-574c3b77a532
